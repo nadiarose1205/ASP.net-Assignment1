@@ -22,6 +22,20 @@ namespace Assignment1.Controllers
             return View();
         }
 
+        public IActionResult Players()
+        {
+            ViewData["Message"] = "List of players.";
+
+            return View();
+        }
+
+        public IActionResult Guilds()
+        {
+            ViewData["Message"] = "Guilds that don't exist yet!";
+
+            return View();
+        }
+
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
