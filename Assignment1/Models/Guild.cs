@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace Assignment1.Models
 {
+    //model for Guild table in database
     public class Guild
     {
-        [Key]
+        //declaring variables
+
+        [Key] //primary key
         public int GuildID { get; set; }
 
         public string GuildName { get; set; }

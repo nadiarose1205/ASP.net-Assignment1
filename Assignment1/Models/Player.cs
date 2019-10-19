@@ -8,12 +8,13 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Assignment1.Models
 {
+    //model for Player table in database
     public class Player
     {
-        [Key]
+        [Key] //primary key 
         public int PlayerID { get; set; }
 
-        [ForeignKey("Guild")]
+        [ForeignKey("Guild")] //foreign key from Guild table
         public int GuildID { get; set; }
 
         public string CharacterName { get; set; }

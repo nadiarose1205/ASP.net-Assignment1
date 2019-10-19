@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Assignment1.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Assignment1.Models;
 
 namespace Assignment1
 {
@@ -41,6 +42,9 @@ namespace Assignment1
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddDbContext<Assignment1Context>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("Assignment1Context")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
